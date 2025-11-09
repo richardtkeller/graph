@@ -5,275 +5,259 @@
 </script>
 <script src="https://files.bpcontent.cloud/2025/11/05/15/20251105155320-RTQY6ZJB.js" defer>
 </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GRAPH Generative AI</title>
-  <style>
-    :root {
-      --background: #f7f3ef;
-      --text: #222;
-      --accent: #000;
-      --border: #e0d6ce;
-      --muted: #6b6b6b;
-      --stock-bg: #333;
-      --stock-text: #fff;
-      --positive: #0a0;
-      --negative: #a00;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Georgia', serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background-color: var(--background);
-      color: var(--text);
-    }
-
-    .stock-bar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: var(--stock-bg);
-      color: var(--stock-text);
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      font-family: 'Courier New', monospace;
-      gap: 1.5rem;
-      border-bottom: 2px solid var(--accent);
-      flex-wrap: wrap;
-    }
-
-    .stock {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    .stock span.symbol {
-      font-weight: bold;
-      color: var(--stock-text);
-    }
-
-    .stock span.value {
-      color: #ddd;
-    }
-
-    .stock span.change.positive {
-      color: var(--positive);
-    }
-
-    .stock span.change.negative {
-      color: var(--negative);
-    }
-
-    header {
-      text-align: center;
-      padding: 3rem 1rem 1rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    header h1 {
-      font-family: 'Times New Roman', serif;
-      font-size: 3rem;
-      letter-spacing: 1px;
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: var(--muted);
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #fff6f0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 0.75rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: bold;
-      margin: 0 1rem;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-
-    section {
-      margin-bottom: 4rem;
-    }
-
-    section h2 {
-      font-family: 'Times New Roman', serif;
-      font-size: 2rem;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-      color: var(--accent);
-    }
-
-    p, li {
-      line-height: 1.7;
-      color: var(--text);
-      font-size: 1.05rem;
-      margin-bottom: 1rem;
-    }
-
-    .submission-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .submission-card {
-      background-color: #fff;
-      border: 1px solid var(--border);
-      padding: 1.5rem;
-      border-radius: 4px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
-    }
-
-    .submission-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .submission-card h3 {
-      color: var(--accent);
-      margin-bottom: 0.5rem;
-      font-size: 1.25rem;
-    }
-
-    .submission-card a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .submission-card a:hover {
-      text-decoration: underline;
-    }
-    
-    /* New styling for the embedded form container */
-    .form-container {
-      display: flex;
-      justify-content: center; /* Center the form horizontally */
-      margin-top: 2rem;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRAPH Generative AI</title>
+  <style>
+    :root {
+      --background: #f7f3ef;
+      --text: #222;
+      --accent: #000;
+      --border: #e0d6ce;
+      --muted: #6b6b6b;
+      --stock-bg: #333;
+      --stock-text: #fff;
+      --positive: #0a0;
+      --negative: #a00;
     }
 
-    footer {
-      background-color: #fff6f0;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      padding: 2rem 1rem;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-  </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--text);
+    }
+
+    .stock-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--stock-bg);
+      color: var(--stock-text);
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-family: 'Courier New', monospace;
+      gap: 1.5rem;
+      border-bottom: 2px solid var(--accent);
+      flex-wrap: wrap;
+    }
+
+    .stock {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .stock span.symbol {
+      font-weight: bold;
+      color: var(--stock-text);
+    }
+
+    .stock span.value {
+      color: #ddd;
+    }
+
+    .stock span.change.positive {
+      color: var(--positive);
+    }
+
+    .stock span.change.negative {
+      color: var(--negative);
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-family: 'Times New Roman', serif;
+      font-size: 3rem;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff6f0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      margin: 0 1rem;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    section h2 {
+      font-family: 'Times New Roman', serif;
+      font-size: 2rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+    }
+
+    p, li {
+      line-height: 1.7;
+      color: var(--text);
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .submission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .submission-card {
+      background-color: #fff;
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .submission-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .submission-card h3 {
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+    }
+
+    .submission-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .submission-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #fff6f0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="stock-bar">
-    <div class="stock"><span class="symbol">GOOG</span><span class="value">$152.87</span><span class="change positive">+0.42%</span></div>
-    <div class="stock"><span class="symbol">AAPL</span><span class="value">$182.33</span><span class="change negative">-0.28%</span></div>
-    <div class="stock"><span class="symbol">JNJ</span><span class="value">$156.74</span><span class="change positive">+0.19%</span></div>
-    <div class="stock"><span class="symbol">BLK</span><span class="value">$724.56</span><span class="change positive">+0.37%</span></div>
-    <div class="stock"><span class="symbol">MSFT</span><span class="value">$331.14</span><span class="change positive">+0.65%</span></div>
-    <div class="stock"><span class="symbol">NVDA</span><span class="value">$458.92</span><span class="change negative">-0.22%</span></div>
-  </div>
+  <div class="stock-bar">
+    <div class="stock"><span class="symbol">GOOG</span><span class="value">$152.87</span><span class="change positive">+0.42%</span></div>
+    <div class="stock"><span class="symbol">AAPL</span><span class="value">$182.33</span><span class="change negative">-0.28%</span></div>
+    <div class="stock"><span class="symbol">JNJ</span><span class="value">$156.74</span><span class="change positive">+0.19%</span></div>
+    <div class="stock"><span class="symbol">BLK</span><span class="value">$724.56</span><span class="change positive">+0.37%</span></div>
+    <div class="stock"><span class="symbol">MSFT</span><span class="value">$331.14</span><span class="change positive">+0.65%</span></div>
+    <div class="stock"><span class="symbol">NVDA</span><span class="value">$458.92</span><span class="change negative">-0.22%</span></div>
+  </div>
 
-  <header>
-    <h1>GRAPH Generative AI</h1>
-    <p>Generative AI for Work & Research — Dr. Richard T. Mayer</p>
-  </header>
+  <header>
+    <h1>GRAPH Generative AI</h1>
+    <p>Generative AI for Work & Research — Dr. Richard T. Mayer</p>
+  </header>
 
-  <nav>
-    <a href="#about-me">About Me</a>
-    <a href="#about-course">About the Course</a>
-    <a href="#submissions">Weekly Submissions</a>
-    <a href="#consultation">Consultation</a>   </nav>
+  <nav>
+    <a href="#about-me">About Me</a>
+    <a href="#about-course">About the Course</a>
+    <a href="#submissions">Weekly Submissions</a>
+  </nav>
 
-  <main>
-    <section id="about-me">
-      <h2>About Me</h2>
-      <p>I'm Dr. Richard T. Mayer, a Senior Principal Engineer in Medical Safety at Johnson & Johnson MedTech and Interventional Oncology. With over two decades in engineering and 19 years dedicated to healthcare innovation, I have led multidisciplinary teams across continents, driving patient safety, benefit-risk quantification, and clinical applicability in R&D strategy.</p>
-      <p>My background spans biomechanics, orthopaedic research, and leadership in global MedTech initiatives, including quantifiable safety frameworks and cross-functional collaborations with regulatory authorities.</p>
-      <p>Beyond my professional career, I contribute as an Honorary Surgeon with the Wildlife Sanctuary Foundation and am an active member of the Orthopaedic Research Society (ORS) and the Swiss Society for Biomedical Engineering (SSBE).</p>
-    </section>
+  <main>
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>I'm Dr. Richard T. Mayer, a Senior Principal Engineer in Medical Safety at Johnson & Johnson MedTech and Interventional Oncology. With over two decades in engineering and 19 years dedicated to healthcare innovation, I have led multidisciplinary teams across continents, driving patient safety, benefit-risk quantification, and clinical applicability in R&D strategy.</p>
+      <p>My background spans biomechanics, orthopaedic research, and leadership in global MedTech initiatives, including quantifiable safety frameworks and cross-functional collaborations with regulatory authorities.</p>
+      <p>Beyond my professional career, I contribute as an Honorary Surgeon with the Wildlife Sanctuary Foundation and am an active member of the Orthopaedic Research Society (ORS) and the Swiss Society for Biomedical Engineering (SSBE).</p>
+    </section>
 
-    <section id="about-course">
-      <h2>About the Course</h2>
-      <p><strong>Generative AI for Work & Research</strong> explores how modern AI tools can augment critical thinking, automate workflows, and enhance creativity in scientific and industrial settings. The course focuses on practical applications of AI models like GPT, diffusion systems, and multimodal architectures for literature analysis, concept design, and data storytelling.</p>
-      <p>My goal in this course is to integrate generative AI responsibly into research and engineering methodologies — enabling safer, faster, and more insightful development of MedTech solutions while maintaining ethical and regulatory compliance.</p>
-    </section>
+    <section id="about-course">
+      <h2>About the Course</h2>
+      <p><strong>Generative AI for Work & Research</strong> explores how modern AI tools can augment critical thinking, automate workflows, and enhance creativity in scientific and industrial settings. The course focuses on practical applications of AI models like GPT, diffusion systems, and multimodal architectures for literature analysis, concept design, and data storytelling.</p>
+      <p>My goal in this course is to integrate generative AI responsibly into research and engineering methodologies — enabling safer, faster, and more insightful development of MedTech solutions while maintaining ethical and regulatory compliance.</p>
+    </section>
 
-    <section id="submissions">
-      <h2>Weekly Submissions</h2>
-      <p>Below are placeholders for weekly projects and reflections from the course. Each link will later showcase generative AI applications developed during the program.</p>
+    <section id="submissions">
+      <h2>Weekly Submissions</h2>
+      <p>Below are placeholders for weekly projects and reflections from the course. Each link will later showcase generative AI applications developed during the program.</p>
 
-      <div class="submission-grid">
-        <div class="submission-card">
-          <h3>Week 1: Introduction & Concept Mapping</h3>
-          <p>Exploration of AI's role in enhancing research and ideation workflows.</p>
-        </div>
-        <div class="submission-card">
-          <h3>Week 2: Literature Review Automation</h3>
-          <p>Using generative models to synthesize academic findings effectively.</p>
-        </div>
-        <div class="submission-card">
-          <h3>Workshop 2: Automated Data Analysis</h3>
-          <p>Analyzed Gapminder data to explore relationships between two global indicators using AI tools.</p>
-          <a href="https://github.com/richardtkeller/graph/blob/main/Julius%20Output%20Report_Richard%20Mayer.pdf" target="_blank">View Report</a>
-        </div>
-        <div class="submission-card">
-          <h3>Workshop 3: Analysing Job Market Data with LLM APIs</h3>
-          <p>Analysed data to explore relationships between programming language experience and income using AI tools.</p>
-          <a href="https://github.com/richardtkeller/graph/blob/main/20251031_Julius%20Output%20Report_Richard%20Mayer_WORKSHOP_3.pdf" target="_blank">View Report</a>
-        </div>
-        <div class="submission-card">
-          <h3>Week 3: Data-to-Insight Generation</h3>
-          <p>Bridging quantitative research with narrative clarity using LLMs.</p>
-        </div>
-        <div class="submission-card">
-          <h3>Week 4: Ethical & Regulatory Perspectives</h3>
-          <p>Responsible deployment of generative systems in scientific domains.</p>
-        </div>
-      </div>
-    </section>
-    
-    <section id="consultation">
-      <h2>Contact for Consultation</h2>
-      <p>Interested in applying advanced Generative AI strategies to your specific business or research challenges? Please fill out the form below to initiate a consultation. I specialize in integrating AI safely and effectively into complex technical and regulated environments.</p>
-        <div class="form-container">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScljNzxZJ1JPTNaLD6OthcMzm100I-NSMp78lFy3d9WNEN3SQ/viewform?embedded=true" width="640" height="780" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <div class="submission-grid">
+        <div class="submission-card">
+          <h3>Week 1: Introduction & Concept Mapping</h3>
+          <p>Exploration of AI's role in enhancing research and ideation workflows.</p>
         </div>
-    </section>
-    
-  </main>
+        <div class="submission-card">
+          <h3>Week 2: Literature Review Automation</h3>
+          <p>Using generative models to synthesize academic findings effectively.</p>
+        </div>
+        <div class="submission-card">
+          <h3>Workshop 2: Automated Data Analysis</h3>
+          <p>Analyzed Gapminder data to explore relationships between two global indicators using AI tools.</p>
+          <a href="https://github.com/richardtkeller/graph/blob/main/Julius%20Output%20Report_Richard%20Mayer.pdf" target="_blank">View Report</a>
+        </div>
+        <div class="submission-card">
+          <h3>Workshop 3: Analysing Job Market Data with LLM APIs</h3>
+          <p>Analysed data to explore relationships between programming language experience and income using AI tools.</p>
+          <a href="https://github.com/richardtkeller/graph/blob/main/20251031_Julius%20Output%20Report_Richard%20Mayer_WORKSHOP_3.pdf" target="_blank">View Report</a>
+        </div>
+        <div class="submission-card">
+          <h3>Week 3: Data-to-Insight Generation</h3>
+          <p>Bridging quantitative research with narrative clarity using LLMs.</p>
+        </div>
+        <div class="submission-card">
+          <h3>Week 4: Ethical & Regulatory Perspectives</h3>
+          <p>Responsible deployment of generative systems in scientific domains.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <footer>
-    <p>&copy; 2025 Dr. Richard T. Mayer — GRAPH Generative AI Portfolio</p>
-  </footer>
+  <footer>
+    <p>&copy; 2025 Dr. Richard T. Mayer — GRAPH Generative AI Portfolio</p>
+  </footer>
 
 </body>
 </html>
